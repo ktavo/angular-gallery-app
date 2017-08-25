@@ -1,5 +1,6 @@
 app.controller('HomeController', ['$scope', 'photos', function($scope, photos) {
-  photos.success(function(data) {
+  photos.then(function(data) {
     $scope.photos = data;
+    console.log(JSON.stringify($scope.photos));
   });
 }]);
